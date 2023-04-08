@@ -1,2 +1,2 @@
 # VoiceBasedProject
-Voice based email dender project
+Voice based email sender project
