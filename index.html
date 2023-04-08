@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Voice To Mail</title>
+    <script>
+         setTimeout(speak,3000);
+           function speak(){
+           responsiveVoice.speak("Welcome To Home Page, 'Choose Any One options', Compose, Create Account, Login ");
+           }
+    </script>
+</head>
+<body class="indexpage">
+    <div><h1 class="title2">Home Page</h1></div>
+    <div class="container">
+    <h1 class="options"><a href="compose.html">Compose a mail</a></h1>
+    <h1 class="options"><a href="CreateAccount.html">Create Account</a></h1>
+    <h1 class="options"><a href="Login.html">Login</a>
+    </h1>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    
+    <script>
+        if(annyang){
+            
+            var commands = {
+                'compose' : function(){
+                    location.href="compose.html";
+                },
+                'create account' : function(){
+                    location.href = "CreateAccount.html";
+                },
+                'login' : function(){
+                    location.href = "Login.html"
+                },
+                'refresh' : function(){
+                    location.href = "index.html";
+                }
+            };
+            annyang.addCommands(commands);
+            annyang.start();
+        }
+    </script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=5qxhjewB"></script>
+</body>
+</html>
